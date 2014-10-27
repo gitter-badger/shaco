@@ -8,4 +8,11 @@
     Text:
   = @article.text
 %hr/
+%h2
+  Comments
+= render @article.comments
+%hr/
+%h2
+  Add commen
+= render 'comments/form'
 = link_to 'Back', articles_path
