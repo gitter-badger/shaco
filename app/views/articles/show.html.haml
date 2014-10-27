@@ -10,27 +10,9 @@
 %hr/
 %h2
   Comments
-- @article.comments.each do |comment|
-  %p
-    %strong
-      Commenter:
-    = comment.commenter
-  %p
-    %strong
-      Body:
-    = comment.body
+= render @article.comments
 %hr/
 %h2
   Add commen
-= form_for([@article, @article.comments.build]) do |f|
-  %p
-    = f.label :commenter
-    %br/
-    = f.text_field :commenter
-  %p
-    = f.label :body
-    %br/
-    = f.text_field :body
-  %p
-    = f.submit
+= render 'comments/form'
 = link_to 'Back', articles_path
