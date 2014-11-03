@@ -1,2 +1,42 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$lightGray: #999;
+ /* universal */
+html {
+  overflow-y: scroll;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+body { padding-bottom: 70px; }
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $lightGray;
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
+  small {
+    float: center;
+  }
+}
+/* forms */
+input,  select, .uneditable-input {
+  border: 2px solid #bbb;
+  padding: 10px;
+  margin-bottom: 15px;
+}

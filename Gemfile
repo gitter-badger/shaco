@@ -10,7 +10,7 @@ gem 'devise'
 gem 'haml'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
-
+gem 'autoprefixer-rails'
 group :test do
  gem 'rspec-rails'
  gem 'database_cleaner'
