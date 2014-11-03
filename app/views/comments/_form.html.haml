@@ -1,8 +1,4 @@
-= form_for([@article, @article.comments.build]) do |f|
-  %p
-    = f.label :commenter
-    %br/
-    = f.text_field :commenter
+= form_for(:comment, url: article_comments_path(article_id: @article)) do |f|
   %p
     = f.label :body
     %br/

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20141027144011) do
   enable_extension "plpgsql"
 
   create_table "articles", force: true do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.text     "text"
     t.datetime "created_at"
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141027144011) do
   end
 
   create_table "comments", force: true do |t|
-    t.string   "commenter"
+    t.integer  "user_id"
     t.text     "body"
     t.integer  "article_id"
     t.datetime "created_at"
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 20141027144011) do
   end
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
