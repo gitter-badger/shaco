@@ -8,14 +8,9 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
-<div class="container-fluid">
-  <br></br>
-  <div class="row">
-    <div class="col-sm-3 blog-sidebar">
-      <%= render 'layouts/header' %>
-    </div>
-      <div class="col-sm-8 blog-main"><%= yield %></div>
-    </div>
+  <%= render 'layouts/header' %>
+<div class="container">
+  <%= yield %>
 </div>
 <%= render 'layouts/footer' %>
 </body>

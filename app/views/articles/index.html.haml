@@ -1,4 +1,10 @@
-= link_to 'new article', new_article_path
+.hero-unit
+  %h1 Shaco
+  %p
+    %small
+      Solving Problems with language
+  %p
+    = link_to 'new issue', new_article_path, class: "btn"
 %br/
 %table.table.table-hover
   - @articles.each do |article|
