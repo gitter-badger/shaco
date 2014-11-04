@@ -1,9 +1,10 @@
 %nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      = link_to 'mu_blog', root_path, class: 'navbar-brand'
+      = link_to 'shaco', articles_path, class: 'navbar-brand'
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       - if user_signed_in?
+        %ul.nav.navbar-nav
         %ul.nav.navbar-nav.navbar-right
           %li
             = link_to 'Sign out', destroy_user_session_path, method: :delete

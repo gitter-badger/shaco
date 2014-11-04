@@ -1,8 +1,6 @@
-%p
-  %strong
-    Commenter:
-%p
-  %strong
-    Body:
-  = comment.body
-= link_to 'Destroy', [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'}
+%blockquote
+  %p
+    = comment.body
+  %small
+    = comment.user.email
+    = link_to '', [comment.article, comment], class: "glyphicon glyphicon-remove", method: :delete, data: {confirm: 'Are you sure?'}
