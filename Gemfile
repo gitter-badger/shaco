@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'carrierwave'
+gem 'cancancan'
 group :test do
  gem 'rspec-rails'
  gem 'database_cleaner'
