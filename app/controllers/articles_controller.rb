@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
-  load_and_authorize_resource
   before_action :article_find, only: [:edit, :update, :destroy, :show]
-
+  load_and_authorize_resource only: [:update, :edit, :destroy]
   def index
     @articles = Article.all
   end
