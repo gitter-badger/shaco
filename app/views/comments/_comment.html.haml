@@ -4,3 +4,4 @@
   %small
     = comment.user.email
     = link_to '', [comment.article, comment], class: "glyphicon glyphicon-remove", method: :delete, data: {confirm: 'Are you sure?'}
+    = image_tag comment.user.avatar, with: 40, height: 40
