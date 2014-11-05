@@ -6,7 +6,8 @@
     %h5
       = @article.title
       %small
-        = link_to '', edit_article_path(@article), class: "glyphicon glyphicon-pencil"
+        - if can? :manage, @article
+          = link_to '', edit_article_path(@article), class: "glyphicon glyphicon-pencil"
     %hr/
     %h4
       = @article.text
