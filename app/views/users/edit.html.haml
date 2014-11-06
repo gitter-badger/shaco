@@ -4,6 +4,12 @@
     = @user.email
 = form_for @user do |f|
   %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :surname
+    = f.text_field :surname
+  %p
     %label
       = t('.my_avatar')
     = image_tag(@user.avatar_url, with: 100, height: 150) if @user.avatar?
