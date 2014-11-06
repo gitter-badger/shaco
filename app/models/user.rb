@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :articles
   has_many :comments
+
+  def full_name
+    if name.nil?
+      email
+    else
+      "#{name} #{surname}"
+    end
+  end
 end

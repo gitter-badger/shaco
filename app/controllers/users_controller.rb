@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :user_find, only: [:update, :edit, :show]
   load_and_authorize_resource
-  
+
   def show
   end
 
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:avatar)
+      params.require(:user).permit(:avatar, :name, :surname)
     end
 
     def user_find
