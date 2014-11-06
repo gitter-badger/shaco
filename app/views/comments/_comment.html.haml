@@ -1,12 +1,10 @@
-%hr/
-%blockquote
+%blockquote{id: "comment_#{comment.id}"}
   %p
     = comment.body
     %small
       = time_ago_in_words comment.created_at
   %small
     = comment.user.full_name
-    = image_tag comment.user.avatar, with: 40, height: 40
+    = image_tag comment.user.avatar, with: 20, height: 20
     - if can? :manage, comment
       = link_to '', [comment.article, comment], class: "glyphicon glyphicon-remove", method: :delete, data: {confirm: 'Are you sure?'}
-%hr/

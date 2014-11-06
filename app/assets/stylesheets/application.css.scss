@@ -34,6 +34,30 @@ time .date-year {
   line-height: 1;
   border-top: #CCC 1px solid;
 }
+.col-md-4.head span{
+  font-size: 19px;
+  display: block;
+  margin-top: 3px;
+  padding-top: 3px;
+  line-height: 1;
+  border-top: #CCC 1px solid;
+}
+.col-md-4.about span {
+  font-size: 19px;
+  display: block;
+  margin-top: 3px;
+  padding-top: 3px;
+  line-height: 1;
+  border-top: #CCC 1px solid;
+}
+.col-md-4.info span {
+  font-size: 19px;
+  display: block;
+  margin-top: 3px;
+  padding-top: 3px;
+  line-height: 1;
+  border-top: #CCC 1px solid;
+}
 section {
   overflow: auto;
 }
@@ -623,7 +647,7 @@ blockquote {
   border-left: 5px solid #d5b1a2;
 }
 blockquote p {
-  font-size: 17.5px;
+  font-size: 14.5px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -634,6 +658,7 @@ blockquote small {
   display: block;
   line-height: 1.428571429;
   color: #e2ab79;
+  font-size: 11px;
 }
 blockquote small:before {
   content: '\2014 \00A0';

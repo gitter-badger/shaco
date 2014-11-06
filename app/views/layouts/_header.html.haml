@@ -5,6 +5,8 @@
     %ul.nav.navbar-nav
       %li
         = link_to 'new issue', new_article_path
+      %li
+        = link_to 'users', users_path
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
         %li.dropdown

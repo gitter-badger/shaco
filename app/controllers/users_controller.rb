@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   before_filter :user_find, only: [:update, :edit, :show]
   load_and_authorize_resource
 
+  def index
+    @users = User.all
+  end
+
   def show
   end
 
