@@ -2,6 +2,11 @@
   .navbar-header
     = link_to 'shaco', articles_path, class: 'navbar-brand'
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li
+        = link_to 'new issue', new_article_path
+      %li
+        = link_to 'users', users_path
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
         %li.dropdown
@@ -10,6 +15,6 @@
             %span.caret
           %ul.dropdown-menu
             %li{:role => "presentation"}
-              = link_to 'Profile', edit_user_path(current_user)
+              = link_to 'Profile', user_path(current_user)
             %li{:role => "presentation"}
               = link_to 'Sign out', destroy_user_session_path, method: :delete

@@ -1,6 +1,6 @@
 .row
   .col-md-2
-    = image_tag @article.user.avatar, with: 80, height: 80
+    = image_tag @article.user.avatar, with: 80, height: 80, class: "img-circle"
     %br/
     = @article.user.full_name
   .col-md-10
@@ -14,7 +14,6 @@
       = @article.text
 %hr/
 = render @article.comments
-%hr/
 %h2
   Add comment
 = render 'comments/form'

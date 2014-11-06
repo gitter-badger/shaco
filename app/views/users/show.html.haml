@@ -1,1 +1,75 @@
-= image_tag @user.avatar, with: 120, height: 120
+.row
+  .col-md-4.head
+    = @user.full_name
+    %span
+    = image_tag @user.avatar, with: 120, height: 120
+    %br/
+    %br/
+    reputation
+  .col-md-4.info
+    = "less info"
+    %span
+    %table.info
+      %tbody
+        %tr
+          %th
+            bio
+            %br/
+          %td
+            website
+          %td
+        %tr
+          %th
+          %td
+            location
+          %td
+        %tr
+          %th
+          %td
+            age
+          %td
+      %tbody
+        %tr
+          %th
+            visits
+            %br/
+          %td
+            member for
+          %td
+        %tr
+          %th
+          %td
+            visits
+          %td
+      %tbody
+        %tr
+          %th
+            stats
+          %td
+            profile views
+          %td
+      %tbody
+        %tr
+          %th
+            private
+            %br/
+          %td
+            email
+          %td
+            = @user.email
+        %tr
+          %th
+          %td
+            real name
+          %td
+            = @user.full_name
+
+  .col-md-4.about
+    - if can? :manage, @user
+      = link_to 'edit', edit_user_path(@user)
+      |
+      = link_to 'delete', user_path(@user), method: :delete, data: {confirm: 'Are you sure?'}
+      |
+    preferences
+    %span
+    about me

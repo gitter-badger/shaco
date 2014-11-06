@@ -1,0 +1,16 @@
+#usersall
+  .usersearch
+    .user-browser
+      %table
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td
+                .user-info
+                  .user-avatar
+                    = link_to image_tag(user.avatar, width: 40, height: 40), user_path(user)
+                  .user-detail
+                    = user.full_name
+                    %span.user-location
+                    %span.user-score
+                  .user-tag

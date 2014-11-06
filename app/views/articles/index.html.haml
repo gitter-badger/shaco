@@ -1,20 +1,15 @@
-.hero-unit
-  %h1 Shaco
-  %p
-    %small
-      Solving Problems with language
-  %p
-    = link_to 'new issue', new_article_path, class: "btn"
-%br/
-%table.table.table-hover
-  - @articles.each do |article|
-    %tr
-      %td
-        = article.title
-      %td
-        = article.text
-      %td
-        = link_to 'Show', article_path(article)
-        - if can? :manage, @article
-          = link_to 'Edit', edit_article_path(article)
-          = link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'}
+- @articles.each do |article|
+  .row{id: "issue_#{article.id}"}
+    .col-md-2
+      .pull-right
+        %section.grid_2.day
+          %time{:datetime => article.created_at.to_s(:db), :pubdate => "pubdate"}
+            %span.date-day= article.created_at.strftime("%d")
+            %span.date-month
+              \.#{article.created_at.strftime("%m")}
+            %span.date-year= article.created_at.strftime("%Y")
+    .col-md-10
+      = link_to article.title, article_path(article)
+      %span/
+      = article.text
+  %hr/
