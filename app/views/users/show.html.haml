@@ -65,10 +65,11 @@
             = @user.full_name
 
   .col-md-4.about
-    = link_to 'edit', edit_user_path(@user)
-    |
-    = link_to 'delete', user_path(@user), method: :delete, data: {confirm: 'Are you sure?'}
-    |
+    - if can? :manage, @user
+      = link_to 'edit', edit_user_path(@user)
+      |
+      = link_to 'delete', user_path(@user), method: :delete, data: {confirm: 'Are you sure?'}
+      |
     preferences
     %span
     about me

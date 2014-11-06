@@ -12,8 +12,9 @@
         %li.dropdown
           %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
             = current_user.email
+            %span.caret
           %ul.dropdown-menu
             %li{:role => "presentation"}
-              = link_to 'Profile', edit_user_path(current_user)
+              = link_to 'Profile', user_path(current_user)
             %li{:role => "presentation"}
               = link_to 'Sign out', destroy_user_session_path, method: :delete
