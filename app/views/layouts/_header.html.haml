@@ -2,12 +2,14 @@
   .navbar-header
     = link_to 'shaco', articles_path, class: 'navbar-brand'
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li
+        = link_to 'new issue', new_article_path
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
         %li.dropdown
           %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
             = current_user.email
-            %span.caret
           %ul.dropdown-menu
             %li{:role => "presentation"}
               = link_to 'Profile', edit_user_path(current_user)
